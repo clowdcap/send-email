@@ -3,16 +3,16 @@ import win32com.client as win32
 # criar integração com o outlook
 outlook = win32.Dispatch('outlook.application')
 
-# criar um email
+# criar um e-mail
 email = outlook.CreateItem(0)
 
 # configurar as informações
-email.To = 'email@email.com' # <- email diretório
+email.To = 'email@email.com' # <- e-mail diretório
 email.Subject = 'Campos variáveis' # <- assunto do e-mail
 
 # variváveis
-nome = 'Nome' # <- nome da pessoa que vc vai mandar o email
-sobrenome = 'Sobrenome' # <- sobrenome da pessoa que vc vai mandar o email
+nome = 'Nome' # <- nome da pessoa que vc vai mandar o e-mail
+sobrenome = 'Sobrenome' # <- sobrenome da pessoa que vc vai mandar o e-mail
 
 # adicionando anexo
 nome_arquivo = 'db.xlsx' # <- nome do arquivo para o anexo
