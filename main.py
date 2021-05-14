@@ -22,13 +22,14 @@ anexo = fr'E:\ ... \enviar-email\anexo\{nome_arquivo}' # <- copiar do diretório
 if anexo == '':
     print('Sem Anexo...') # <- caso você não queria anexar arquivo, na variável anexo deixar em branco = ''
 else:
-    email.Attachments.Add(anexo) # <-
+    email.Attachments.Add(anexo) # <- Anexando o documento
     print('Anexado documento...')
 
 # HTMLBody
 # css
 css = '''
-<style>
+<style>     
+            /* Reset */
             * {
                 margin: 0;
                 padding: 0;
@@ -124,7 +125,7 @@ https://www.google.com/</a></p>
                 <p>Caso tenha alguma dúvida, estou à disposição</p>
 
                 
-</div>
+</div> <!--conteudo-->
 '''
 
 assinatura = '''
@@ -138,7 +139,7 @@ assinatura = '''
     <p>Telefone: (41) XXXX-XXXX - </p>
     <p>E-mail: clowdcap@hotmail.com</p>
     <p>Nome Completo da Sua Empresa LTDA.</p>
-</div>
+</div> <!--assinatura-->
 '''
 
 topo = '''
@@ -153,7 +154,8 @@ capa = '''
 </div> <!--capa-->
 '''
 
-email.HTMLBody = f'''
+# Montagem do corpo do HTML, criado bloco com a semântica do HTML e integração das variáveis (por isso o f inicial)
+email.HTMLBody = f''' 
 <!DOCTYPE html>
 <html>
     <head>
@@ -173,7 +175,7 @@ email.HTMLBody = f'''
                 
             {assinatura}
            
-        </section>
+        </section> <!--email-->
     </body>
 </html>
 
