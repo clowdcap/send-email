@@ -103,24 +103,24 @@ css = '''
         </style>
 '''
 
-# HTML body
+# HTML body <- você deve alterar os dados dentro das suas variáveis do body, proceso é simples.
+# Você cria uma variável que armazene o conteudo HTML, podendo estilizar na variavel CSS
+# Assim ter uma dinamica melhor na hora de montar o corpo do e-mail.
+
 conteudo = f'''
 <div class="conteudo">
                 <p>Bom dia {nome} {sobrenome},</p>
                 <br>
-                <p>Como conversados na sua visita ao Setor de Urbanismo da prefeitura de Campo Magro, fiquei de 
-responder algumas dúvidas suas e lhe retorno com essa mensagem para ajudá-lo.</p> 
+                <p>Esse é um email simples que pode ser aplicado por qualquer pessoa</p> 
                 <br>
-                <p>Sobre o loteamento de interesse social, é importante lembrar que deve ter um interesse público e 
-privado, logo, pedimos que, após a idealização de locais para ter esse loteamento, deve ser aberto uma guia amarela, 
-solicitando um "", para que possa ter uma análise. O critério é que a área estimada, deve ter acesso a coleta de 
-esgoto e se caso não tiver, propor alguma solução de estratégia para levar esse serviço para área.</p> 
+                <p>Crie um ambiente python, no caso desse código, eu realizei no PyCharm Community com Python
+                3.9 instalado na máquina.</p> 
                 <br>
-                <p>E o mapa de zoneamento, pode ser pego no site da COMEC:</p>
-                <p>Link: <a href="http://www.comec.pr.gov.br/Pagina/UTP-Campo-Magro">
-http://www.comec.pr.gov.br/Pagina/UTP-Campo-Magro</a></p>
+                <p>Caso você deja mandar pelo email, um link, também da certo:</p>
+                <p>Link: <a href="https://www.google.com/">
+https://www.google.com/</a></p>
                 <br>
-                <p>Caso eu não tenha esclarecido totalmente a sua dúvida, estou à disposição</p>
+                <p>Caso tenha alguma dúvida, estou à disposição</p>
 
                 
 </div>
@@ -133,23 +133,22 @@ assinatura = '''
         <br>
     <h3>Jose Marinho</h3>
         <br>
-    <p>Whatsapp: (41) 9 9272-5388</p>
-    <p>Telefone: (41) 3677-4050 - Setor Urbanismo</p>
-    <p>jm.arquiteturacwb@gmail.com</p>
-    <p>Prefeitura Municipal de Campo Magro / PR</p>
+    <p>Whatsapp: (41) X XXXX-XXXX</p>
+    <p>Telefone: (41) XXXX-XXXX - </p>
+    <p>E-mail: clowdcap@hotmail.com</p>
+    <p>Nome Completo da Sua Empresa LTDA.</p>
 </div>
 '''
 
 topo = '''
 <div class="topo">
-    <img src="https://leismunicipais.com.br/img/cidades/pr/campo-magro.png" alt="campo-magro">
-    <h2>Prefeitura Municipal de Campo Magro</h2>
+    <h2>Nome Completo da Sua Empresa LTDA.</h2>
 </div> <!--topo-->
 '''
 
 capa = '''
 <div class="capa">
-    <p>Atendimento via E-mail - A/C: <b>José Marinho - Estagiário</b></p>
+    <p>Atendimento via E-mail - A/C: <b>José Marinho - Developer</b></p>
 </div> <!--capa-->
 '''
 
