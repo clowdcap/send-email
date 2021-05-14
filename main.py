@@ -1,4 +1,5 @@
 import win32com.client as win32
+# para baixar a biblioteca -> pip install pywin32
 
 # criar integração com o outlook
 outlook = win32.Dispatch('outlook.application')
