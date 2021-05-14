@@ -7,23 +7,24 @@ outlook = win32.Dispatch('outlook.application')
 email = outlook.CreateItem(0)
 
 # configurar as informações
-email.To = 'clowdcap@hotmail.com'
-email.Subject = 'Campos variáveis'
+email.To = 'email@email.com' # <- email diretório
+email.Subject = 'Campos variáveis' # <- assunto do e-mail
 
 # variváveis
-nome = 'Luiz'
-sobrenome = 'Guilherme'
+nome = 'Nome' # <- nome da pessoa que vc vai mandar o email
+sobrenome = 'Sobrenome' # <- sobrenome da pessoa que vc vai mandar o email
 
 # adicionando anexo
-nome_arquivo = 'db.xlsx'
-anexo = fr'E:\Google\CODEX\Python\enviar-email\anexo\{nome_arquivo}'
-
+nome_arquivo = 'db.xlsx' # <- nome do arquivo para o anexo
+anexo = fr'E:\ ... \enviar-email\anexo\{nome_arquivo}' # <- copiar do diretório completo
+# deixar o f para aceitar variável e r para que escreva o diretorio sem interferencias de manipulação de str.
 if anexo == '':
-    print('Sem Anexo...')
+    print('Sem Anexo...') # <- caso você não queria anexar arquivo, na variável anexo deixar em branco = ''
 else:
-    email.Attachments.Add(anexo)
+    email.Attachments.Add(anexo) # <-
     print('Anexado documento...')
 
+# HTMLBody
 # css
 css = '''
 <style>
@@ -102,7 +103,7 @@ css = '''
         </style>
 '''
 
-# body
+# HTML body
 conteudo = f'''
 <div class="conteudo">
                 <p>Bom dia {nome} {sobrenome},</p>
